@@ -24,7 +24,7 @@ public class DashboardController {
      * return 데이터 타입을 entity로 받으니까 jpa n+1문제가 발생하여 정상적으로 동작하지 않음
      * => dto 클래스 만들어서 entity로 받은값을 dto로 변환하여 문제 해결
      * @param time
-     * @return
+     * @return TopKeywordResponse
      */
     @GetMapping("/top")
     public List<TopKeywordResponse> topKeywords(@RequestParam String time) {
