@@ -13,12 +13,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false         # 중복 출력 방지
     properties:
       hibernate:
         format_sql: true
+        highlight_sql: true   # 콘솔 색상 강조
     database-platform: org.hibernate.dialect.MySQL8Dialect
-    logging:
-      level:
-        org.hibernate.SQL: debug
-        org.hibernate.orm.jdbc.bind: trace
+
+logging:
+  level:
+    org.hibernate.SQL: debug            # SQL 1번만 로거로 출력
+    org.hibernate.orm.jdbc.bind: trace  # 바인딩 파라미터 출력

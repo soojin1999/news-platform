@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 저장/수집
+ */
 @Service
 @Transactional
 @RequiredArgsConstructor
